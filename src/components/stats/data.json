@@ -1,0 +1,20 @@
+[
+    {
+      "id": 0,
+      "num": "$89,914",
+      "subtext": "of $100.000 backed",
+      "flag": true
+    },
+    {
+        "id": 1,
+        "num": "5,007",
+        "subtext": "total backers",
+        "flag": true
+    },
+    {
+        "id": 2,
+        "num": "56",
+        "subtext": "days left",
+        "flag": false
+    }
+  ]
