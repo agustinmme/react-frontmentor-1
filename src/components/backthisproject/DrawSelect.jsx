@@ -16,11 +16,11 @@ function DrawSelect({nameButton,disButton}) {
         onClick={onOpen}
         w={"s"}
         disabled={disButton}
-        colorScheme="secon"
+        colorScheme={disButton?"gris":"secon"}
         color="white"
         rounded={"full"}
         _hover={{
-          bg: "prim.100",
+          bg: disButton?"gris.100":"prim.100",
         }}
       >
         {nameButton}

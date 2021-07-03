@@ -9,7 +9,7 @@ import {
   Spacer,IconButton,Tooltip
 } from "@chakra-ui/react";
 import { BellIcon } from "@chakra-ui/icons";
-import ModalSelect from '../backthisproject/DrawSelect';
+import DrawSelect from '../backthisproject/DrawSelect';
 
 export default function SocialProfileWithImage() {
 
@@ -19,8 +19,8 @@ export default function SocialProfileWithImage() {
       <Flex justify={"center"} mt={-12}>
         <Avatar
           size={"lg"}
-          src={"/images/logo-mastercraft.svg"}
-          alt={"Author"}
+          src={"./images/logo-mastercraft.svg"}
+          alt={"H"}
         />
       </Flex>
 
@@ -40,7 +40,7 @@ export default function SocialProfileWithImage() {
           spacing={0}
           align={"center"}
         >
-        <ModalSelect nameButton={'Back this proyect'} disButton={false}/>
+        <DrawSelect nameButton={'Back this proyect'} disButton={false}/>
           <Spacer />
           <Tooltip label={mark?"UnBookmark":"Bookmark"} closeDelay={600}>
           <IconButton
