@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import {
   Heading,
   Avatar,
@@ -6,22 +6,17 @@ import {
   Flex,
   Text,
   Stack,
-  Spacer,IconButton,Tooltip
+  Spacer,
+  Image,
 } from "@chakra-ui/react";
-import { BellIcon } from "@chakra-ui/icons";
-import DrawSelect from '../backthisproject/DrawSelect';
+import DrawSelect from "../backthisproject/DrawSelect";
 
 export default function SocialProfileWithImage() {
-
-  const [mark,setMark] = useState(false);
+  const [mark, setMark] = useState(false);
   return (
     <Box maxW="4xl" mx={"auto"} p={5} mt={-100} bg="white" borderRadius={10}>
       <Flex justify={"center"} mt={-12}>
-        <Avatar
-          size={"lg"}
-          src={"./images/logo-mastercraft.svg"}
-          alt={"H"}
-        />
+        <Avatar size={"lg"} src={"./images/logo-mastercraft.svg"} alt={"H"} />
       </Flex>
 
       <Box p={6}>
@@ -40,23 +35,16 @@ export default function SocialProfileWithImage() {
           spacing={0}
           align={"center"}
         >
-        <DrawSelect nameButton={'Back this proyect'} disButton={false}/>
+          <DrawSelect nameButton={"Back this proyect"} disButton={false} />
           <Spacer />
-          <Tooltip label={mark?"UnBookmark":"Bookmark"} closeDelay={600}>
-          <IconButton
-            colorScheme={mark?"secon":"gris"}
-            color={mark?"white":"gray"}
-            onClick={() =>{setMark(mark?false:true)}}
-            rounded={"full"}
-            aria-label="Call Segun"
-            size="lg"
-            icon={<BellIcon />}
-          />
-              </Tooltip>
+            <Image display={["none", "none", "flex", "flex"]} src={mark ?"./images/bookmarket-off.svg":"./images/bookmarket-on.svg"}  onClick={() => {
+              setMark(mark ? false : true);
+            }} />
+            <Image display={["flex", "flex", "none", "none"]} src={mark ?"./images/icon-bookmark-off.svg":"./images/icon-bookmark-on.svg"}  onClick={() => {
+              setMark(mark ? false : true);
+            }} />
         </Stack>
-        
       </Box>
-      
     </Box>
   );
 }

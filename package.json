@@ -2,7 +2,7 @@
   "name": "parte-1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://agustinmme.github.io/react-frontmentor-1/",
+  "homepage": ".",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^1.6.4",
