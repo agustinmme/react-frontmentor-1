@@ -6,4 +6,4 @@ test:https://agustinmme.github.io/react-frontmentor-1/
 
 yarn start...
 
-FALTA EVENTO SELECT
+Falta agregar Modals 
