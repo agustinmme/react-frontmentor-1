@@ -7,11 +7,11 @@ import {
   List,
   ListItem,
 } from "@chakra-ui/react";
-import ModalSelect from "../backthisproject/DrawSelect";
+import ModalFin from "../backthisproject/ModalFin";
 import lista from './data.json'
 function ProductCard() {
   return (
-    <List spacing={3}>
+    <List spacing={3} >
       {lista.map((item) => (
         <ListItem key={item.id}>
           <Box
@@ -19,6 +19,7 @@ function ProductCard() {
             mx={"auto"}
             p={10}
             mt={10}
+            mb={10}
             borderWidth="3px"
             borderRadius="lg"
             borderColor={item.stock===0?"gray.100":"gray.300"}
@@ -57,7 +58,7 @@ function ProductCard() {
                 left
               </Text>
               <Spacer />
-              <ModalSelect nameButton={'Select Reward'}  disButton={item.stock===0?true:false}/>
+              <ModalFin nameButton={item.stock===0?"Sold out":"Select Reward"}  disButton={item.stock===0?true:false}/>
             </Stack>
           </Box>
         </ListItem>

@@ -1,5 +1,5 @@
 import ChartStat from "./components/stats/ChartStat";
-import Card from "./components/usercard/UserCard";
+import Card from "./components/Banner/Banner";
 import AboutFrame from "./components/about/AboutFrame";
 import Hero from "./components/heros/Hero";
 import { Box } from "@chakra-ui/react";

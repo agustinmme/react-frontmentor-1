@@ -16,9 +16,9 @@ export default function BasicStatistics() {
         ))}
       </SimpleGrid>
       <Progress
-        colorScheme="secon"
-        bg="gray.300"
-        height="10px"
+        height="13px"
+        colorScheme="prim"
+        bg="gray.100"
         mt={5}
         value={80}
         borderRadius={10}
