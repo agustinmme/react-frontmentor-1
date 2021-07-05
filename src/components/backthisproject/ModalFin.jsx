@@ -10,8 +10,9 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react";
-function ModalFin({ nameButton, disButton }) {
+function ModalFin({ nameButton, disButton,onClosed }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  
   return (
     <>
      
@@ -50,7 +51,10 @@ function ModalFin({ nameButton, disButton }) {
                 _hover={{
                   bg: "secon.100",
                 }}
-                onClick={onClose}
+                onClick={() => {
+                  onClose();
+                  nameButton==='Continue'?onClosed():onClose();
+                }}
               >
                 Got it!
               </Button>

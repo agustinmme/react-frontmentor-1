@@ -16,7 +16,7 @@ import {
 import React, { useState } from "react";
 import ModalFin from "../backthisproject/ModalFin";
 import lista from "./dataInput.json";
-function ProductCard() {
+function ProductCard({onClosed}) {
   const format = (val) => `$` + val;
   const parse = (val) => val.replace(/^\$/, "");
 
@@ -144,6 +144,7 @@ function ProductCard() {
                 </NumberInputStepper>
               </NumberInput>
               <ModalFin
+                  onClosed={onClosed}
                 display={item.stock === 0 ? "none" : "flex"}
                 nameButton={"Continue"}
                 disButton={item.stock === 0 ? true : false}
